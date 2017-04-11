@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: tcs.us-south.mybluemix.net
+  name: InsuredRAD
+  host: InsuredRAD
+  disk_quota: 512M
+  services:
+  - Visual Recognition-zx
+  - SQL Database-fr

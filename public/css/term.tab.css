@@ -1,0 +1,80 @@
+.termtable {
+  width: 90%;
+  overflow: hidden;
+  background: #FFF;
+  color: #024457;
+  border-radius: 10px;
+  margin-left:auto; 
+  margin-right:auto;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+.termtable tr {
+  border: 1px solid #D9E4E6;
+  font-size: 1.0em;
+}
+.termtable tr:nth-child(odd) {
+  background-color: #EAF3F3;
+  
+}
+.termtable tr:hover {
+  background-color: #EAEDED;
+  cursor: pointer; cursor: hand;
+  font-size: 1.1em;
+}
+.termtable th {
+  display: none;
+  border: 1px solid #FFF;
+  background-color: #167F92;
+  color: #FFF;
+  padding: 1em;
+}
+.termtable th:first-child {
+  display: table-cell;
+  text-align: center;
+}
+.termtable th:nth-child(2) {
+  display: table-cell;
+}
+.termtable th:nth-child(2) span {
+  display: none;
+}
+.termtable th:nth-child(2):after {
+  content: attr(data-th);
+}
+@media (min-width: 480px) {
+  .termtable th:nth-child(2) span {
+    display: block;
+  }
+  .termtable th:nth-child(2):after {
+    display: none;
+  }
+}
+.termtable td {
+  display: block;
+  word-wrap: break-word;
+  border-radius: 10px;
+  
+  max-width: 7em;
+}
+.termtable td:first-child {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #D9E4E6;
+}
+@media (min-width: 480px) {
+  .termtable td {
+    border: 1px solid #D9E4E6;
+  }
+}
+.termtable th, .termtable td {
+  text-align: left;
+  margin: .5em 1em;
+}
+@media (min-width: 480px) {
+  .termtable th, .termtable td {
+    display: table-cell;
+    padding: 1em;
+  }
+}
+

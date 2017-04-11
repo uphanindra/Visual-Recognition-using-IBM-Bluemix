@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+		<link rel="stylesheet" type="text/css" href="/css/indexStyle.css" />
+		<link rel="stylesheet" type="text/css" href="/css/term.tab.css" />
+		<script src="/js/insurer.data.validation.js">	</script>
+		
+		
+	</head>
+    <body>
+        <div class="container">
+		
+		   <% include partials/topBar %>
+			
+			<header>
+			
+				<h1>Demonstraion of <strong>RAD with IoT</strong> App</h1>
+				<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+			</header>
+			
+			
+		</div>
+			
+		<div class="wrap">
+				
+				<form class="form-2" name = "termDataForm" id = "termDataForm" action="displayPrem" method="post">	
+				
+					<h3>Policy Number <%= policyNum %></h3><br>
+					
+					<table class="termtable">
+						  <% for(var i=0; i < data.length; i++) { %>
+							   <tr  onclick="validateTermData(this); ">
+								<td><%= data[i].START_DATE + ' to ' + data[i].STOP_DATE %></td>
+							  </tr>
+							<% } %>
+					</table>
+					
+					
+					<input type="hidden" name="term" id="term" value="">
+					<input type="hidden" name="policyNum" id="policyNum" value="<%= policyNum %>">
+					
+				</form>
+				
+			</div>
+    </body>
+</html>

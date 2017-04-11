@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+  
+  <head>
+		<% include partials/head %>
+		<link rel="stylesheet" type="text/css" href="/css/premStyle.css" />
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<script src="/js/insurer.data.validation.js">	</script>
+		
+		
+	</head>
+
+  <body>
+
+        <div class="container">
+		
+		   <% include partials/topBar %>
+			
+			<header>
+			
+				<h1>Demonstraion of <strong>RAD with IoT</strong> App</h1>
+				<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+			</header>
+			
+			
+		</div>
+		
+		<div class="wrap">
+				
+			<div class="form-3">
+				<br>
+					
+				<div>
+				  <p class="alignleft"> <span class="cTitle">Policy# : </span><span class="cData"><%= policyNum %> </span></p>
+				  <p class="alignright"><span class="cTitle">Term Start Date : </span><span class="cData"><%= startDate %> </span></p>
+				</div>
+				<div style="clear: both;"></div>	
+				<div>
+				  <p class="alignright"><span class="cTitle">Term Stop Date : </span><span class="cData"><%= stopDate %> </span></p>
+				</div>
+				<div style="clear: both;"></div>
+					
+				</br>
+					
+				<div>
+				  <p class="alignleftSide"> <span class="cTitle">Predeterined Risk Rate : </span><span class="cData"><%= determinedRisk %></span></p>
+				  <p class="alignrightSide"><span class="cTitle">Predetermined Premium : $ </span><span class="cData"><%= collectedPrem %></span></p>
+				 	
+				</div>
+				<div style="clear: both;"></div>	
+				
+				<div>
+				  <p class="alignleftSide"> <span class="cTitle">Revised Risk Rate : </span><span class="cData"><%= revisedRisk %></span></p>
+				  <p class="alignrightSide"><span class="cTitle">Revised Premium : $ </span><span class="cData"><%= revisedPrem %></span></p>
+				 	
+				</div>
+				<div style="clear: both;"></div>
+				<br>
+				<div>
+				  <p class="alignleft"> <span class="cTitle">Usage History :</span></p>
+				</div>
+				<div style="clear: both;"></div>
+				
+				<table class="responstable">
+				  
+				  <tr>
+					<th>Driver Id</th>
+					<th>Name</th>
+					<th>Miles driven in Day</th>
+					<th>Miles driven in Night</th>
+					<th>Average Speed</th>
+					<th>Harsh Breaks</th>
+					<th>Harsh Turns</th>
+					<th>Relation</th>
+				  </tr>
+				  
+				   
+				   <% for(var i=0; i < data.length; i++) {	   	
+				   	%>
+				  <tr>
+					<td><%= data[i].DRIVER_ID %></td>
+					<td><%= data[i].DRIVER_NAME %></td>
+					<td><%= data[i].DAY_MILES %></td>
+					<td><%= data[i].NIGHT_MILES %></td>
+					<td><%= parseFloat(data[i].AVG_SPEED).toFixed(1) %></td>
+					<td><%= data[i].HARSH_BREAKS %></td>
+					<td><%= data[i].HARSH_TURNS %></td>
+					<td><%= data[i].RELATION %></td>						
+				  </tr>
+					<% } %>
+				  
+				</table>
+				<br/>
+				<h4>Go to <a href = "javascript: submitform()">home page</a> again!</h4>
+				
+				<form id = "home" name = "home" action = "/" method = "get">
+				</form>
+				<script type="text/javascript">
+				function submitform()
+				{
+				  document.home.submit();
+				}
+				</script>
+				
+	    	</div>
+		</div>
+  </body>
+</html>

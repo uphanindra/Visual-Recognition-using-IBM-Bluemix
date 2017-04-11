@@ -1,0 +1,58 @@
+{
+	"name": "InsuredRAD",
+	"version": "0.0.1",
+    "private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "^4.13.3",
+		"ejs": "2.4.x",
+		"body-parser": "1.14.x",
+		"morgan": "1.6.x",
+		"errorhandler": "1.4.x",
+		"connect-multiparty": "2.0.x",
+		"watson-developer-cloud": "^1.0.6",
+		"archiver": "^0.16.0",
+		"async": "^1.5.0",
+		"express-rate-limit": "^2.0.2",
+		"express-secure-only": "^0.2.1",
+		"find-remove": "^0.2.8",
+		"helmet": "^0.14.0",
+		"jade": "^1.11.0",
+		"request": "^2.65.0",
+		"uuid": "^2.0.1",
+		"validator": "^4.7.0",
+		"util": "0.10.x",
+		"ibm_db": "0.0.x",
+		"change-case": "2.3.x"
+	},
+	"repository": {},
+	"engines": {
+		"node": "4.2.x"
+	} ,	
+	 "author": "Panchatantra Team.",
+	 "contributors": [
+    {
+      "name": "Muralkrishnan Velu",
+      "email": "muralikrishnan.velu@tcs.com"
+    },
+    {
+      "name": "V Anupriya",
+      "email": "v.anupriya@tcs.com"
+    },
+    {
+      "name": "Lakshmi Swetha Polineni",
+      "email": "lakshmi.polineni@tcs.com"
+    },
+    {
+      "name": "Sneha D",
+      "email": "d.sneha@tcs.com"
+    },
+    {
+      "name": "Phanindra Uppalapati",
+      "email": "phanindra.uppalapati@tcs.com"
+    }
+  ]
+ 
+}

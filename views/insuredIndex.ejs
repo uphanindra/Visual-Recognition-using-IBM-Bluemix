@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+		
+	</head>
+    <body>
+       
+		 <div class="container">
+				
+			  <% include partials/topBar %>
+				<header>
+					<h1>Demonstraion of <strong>RAD with IoT</strong> Application</h1>
+					<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+				</header>
+					
+		 </div>
+			
+		<div class="wrap">
+				
+				<form class="form-1" action="classify1" method="post">
+					<p class="field">
+						<img src="/test.jpg" alt="Test Image 1" width="320" height="320">
+					</p>
+					<button type="submit" name="submit">Use for Demo</button>
+					
+				</form>
+				
+				<form class="form-1" action="classify2" method="post">
+					<p class="field">
+						<img src="/test1.jpg" alt="Test Image 1" width="320" height="320">
+					</p>
+					
+					<button type="submit" name="submit">Use for Demo</button>
+				
+				</form>
+			
+			</div>
+    </body>
+</html>

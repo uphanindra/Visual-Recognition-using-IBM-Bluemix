@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+		<link rel="stylesheet" type="text/css" href="/css/indexStyle.css" />
+	</head>
+    <body>
+        <div class="container">
+		
+		    <% include partials/topBar %>
+		    		 
+			<header>
+			
+				<h1>Demonstraion of <strong>RAD with IoT</strong> App</h1>
+				<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+			</header>
+			
+			
+		</div>
+			
+		<div class="wrap">
+				
+				<form class="form-2" action="api/insuredDemo" method="post">
+					<br>
+					<p class="thicker"> <span class="big">Insured </span> has to install a device which scans drivers face and recognize who is driving. It helps to get accurate premium.</p>
+					<br>
+					<p class="submit">
+						<button type="submit" name="submit">Go</button>
+					</p>
+				
+				</form>
+				
+				<form class="form-2" action="api/insurerDemo" method="post">
+					<br>
+					<p class="thicker"> <span class="big">Insurer </span>knows who is driving vehicle most to assess accurate risk with help of our RAD device and telematics information.</p>
+					<br>
+					<p class="submit">
+						<button type="submit" name="submit">Go</button>
+					</p>
+				
+				</form>
+				
+				
+			</div>
+    </body>
+</html>

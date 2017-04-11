@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+	</head>
+    <body>
+        <div class="container">
+		
+		  <% include partials/topBar %>
+			
+			<header>
+			
+				<h1><strong>Successful!!!</strong></h1>
+				<h2>Thank you IBM for wonderful Bluemix Serives</h2>
+			</header>
+			
+			
+		</div>
+			
+		<div class="wrap">
+				
+			<form class="form-1">
+				<br>
+				<h3>Driver <%= user %> data has been updated!!</h3> <br>
+				<h4>Go to <a href = "javascript: submitform()">home page</a> again!</h4>
+				
+				</form>
+			
+		</div>
+		
+		
+		<form id = "home" name = "home" action = "/" method = "get">
+		</form>
+		<script type="text/javascript">
+		function submitform()
+		{
+		  document.home.submit();
+		}
+		</script>
+    </body>
+</html>

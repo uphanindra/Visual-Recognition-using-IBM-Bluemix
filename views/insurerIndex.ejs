@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+		<link rel="stylesheet" type="text/css" href="/css/indexStyle.css" />
+		<script src="/js/insurer.data.validation.js">	</script>
+	</head>
+    <body>
+        <div class="container">
+		
+		    <% include partials/topBar %>
+		    		 
+			<header>
+			
+				<h1>Demonstraion of <strong>RAD with IoT</strong> App</h1>
+				<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+			</header>
+			
+			
+		</div>
+			
+		<div class="wrap">
+				
+			<form name = "termForm" action="displayTerm" method="post">	
+			<div class="form-1">
+				<h3>Policy details</h3><br>
+					
+					<p class="field">
+						<input type="text" name="policyNum" id="policyNum" placeholder="Enter Policy Number" autofocus autocomplete="off">
+						<i class="icon-user icon-large"></i>
+					</p>
+			
+				</div>
+				<p class="submit">
+					<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+				</p>
+			</form>	
+				
+				
+		</div>
+    </body>
+</html>

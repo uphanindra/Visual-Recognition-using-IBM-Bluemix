@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>		
+		<script src="/js/driver.data.validation.js">	</script>
+	</head>
+    <body>
+        <div class="container">
+		
+		  <% include partials/topBar %>
+			
+			<header>
+			
+				<h1>Tracking <strong>Miles</strong> driven</h1>
+				<h2>IBM Bluemix SQL DB service is used to store Miles</h2>
+			</header>
+		</div>
+			
+		<div class="wrap">
+			<form name = "dataForm" action="data" onsubmit="return validateForm()" method="post">	
+			<div class="form-1">
+				<h3>Driving by <%= driverName %> </h3> <br/>
+				<h4>Policy <%= policyNum %></h4><br>	
+					<input type="hidden" name="drvName" id="drvName" value=<%= driverName %>>
+					<input type="hidden" name="drvId" id="drvId" value=<%= driverId %>>
+					<p class="field">
+						<input type="text" name="dayMiles" id="dayMiles" placeholder="Miles driven by Driver in Day Time" autofocus autocomplete="off">
+						<i class="icon-dashboard icon-large"></i>
+					</p>
+					<p class="field">
+						<input type="text" name="nightMiles" id="nightMiles" placeholder="Miles driven by Driver in Night Time" autocomplete="off">
+						<i class="icon-dashboard icon-large"></i>
+					</p>
+					<p class="field">
+						<input type="text" name="avgSpeed" id="avgSpeed" placeholder="Average Speed driven" autocomplete="off">
+						<i class="icon-road icon-large"></i>
+					</p>
+					<p class="field">
+						<input type="text" name="harshBreaks" id="harshBreaks" placeholder="Number of Harsh Breaks" autocomplete="off">
+						<i class="icon-warning-sign icon-large"></i>
+					</p>
+					<p class="field">
+						<input type="text" name="harshTurns" id="harshTurns" placeholder="Number of Harsh Turns" autocomplete="off">
+						<i class="icon-random icon-large"></i>
+					</p>
+					
+				</div>
+				<p class="submit">
+					<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+				</p>
+			</form>			
+		</div>
+    </body>
+</html>
+
