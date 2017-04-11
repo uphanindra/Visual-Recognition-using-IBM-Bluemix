@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<% include partials/head %>
+		<link rel="stylesheet" type="text/css" href="/css/indexStyle.css" />
+		<link type="text/css" rel="stylesheet" href="waitMe.css">
+
+	</head>
+    <body>
+        <div class="container">
+		
+		    <% include partials/topBar %>
+		    		 
+			<header>
+			
+				<h1>Demonstraion of <strong>RAD with IoT</strong> App</h1>
+				<h2>IBM Bluemix visual recognition api is used to identify Driver</h2>
+			</header>
+			
+			
+		</div>
+			
+		<div class="wrap">
+				
+				<form class="form-2"  method="post">
+					<br>
+					<p class="thicker"> <span class="big">Insured </span> has to install a device which scans drivers face and recognize who is driving. It helps to get accurate premium.</p>
+					<br>
+					<p class="submit">
+						<button type="submit" name="submit" id="demo">Go</button>
+					</p>
+				
+				</form>
+				
+				<form class="form-2" action="api/insurerDemo" method="post">
+					<br>
+					<p class="thicker"> <span class="big">Insurer </span>knows who is driving vehicle most to assess accurate risk with help of our RAD device and telematics information.</p>
+					<br>
+					<p class="submit">
+						<button type="submit" name="submit">Go</button>
+					</p>
+				
+				</form>
+				
+				
+			</div>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="waitMe.js"></script> 
+
+<script>
+$(function(){
+
+// none, bounce, rotateplane, stretch, orbit, 
+// roundBounce, win8, win8_linear or ios
+var current_effect = 'bounce'; // 
+
+$('#demo').click(function(){
+run_waitMe(current_effect);
+});
+
+function run_waitMe(effect){
+$('#SELECTOR').waitMe({
+
+//none, rotateplane, stretch, orbit, roundBounce, win8, 
+//win8_linear, ios, facebook, rotation, timer, pulse, 
+//progressBar, bouncePulse or img
+effect: 'bounce',
+
+//place text under the effect (string).
+text: '',
+
+//background for container (string).
+bg: 'rgba(255,255,255,0.7)',
+
+//color for background animation and text (string).
+color: '#000',
+
+//change width for elem animation (string).
+sizeW: '',
+
+//change height for elem animation (string).
+sizeH: '',
+
+// url to image
+source: '',
+
+// callback
+onClose: function() {}
+
+});
+}
+	
+});
+</script>
+    </body>
+</html>
